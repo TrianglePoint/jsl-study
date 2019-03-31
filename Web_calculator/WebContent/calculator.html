@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="calculator.css" />
+	<script type="text/javascript" src="calculator.js"></script>
+</head>
+<body>
+	<div id="div_mainContainer">
+		<div id="div_historyScreenContainer">
+			<p id="p_historyScreen"></p>
+		</div>
+		<p id="p_screen">0</p>
+		<table id="table_clear_equal">
+            <tr>
+                <td><button onclick="clearAllScreen()">Clear</button></td>
+                <td><button onclick="insertOperator('=')">=</button></td>
+            </tr>
+		</table>
+		<table id="table_oper_rand">
+			<tr>
+				<td><button onclick="insertNumber(1)">1</button></td>
+				<td><button onclick="insertNumber(2)">2</button></td>
+				<td><button onclick="insertNumber(3)">3</button></td>
+				<td class="smallVoid"></td>
+				<td><button onclick="insertOperator('+')">+</button></td>
+				<td class="smallVoid"></td>
+				<td><button onclick="insertOperator('^')">x^y</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="insertNumber(4)">4</button></td>
+				<td><button onclick="insertNumber(5)">5</button></td>
+				<td><button onclick="insertNumber(6)">6</button></td>
+				<td class="smallVoid"></td>
+				<td><button onclick="insertOperator('-')">-</button></td>
+				<td class="smallVoid"></td>
+				<td><button id="btn_sin" onclick="insertOperator('sin')">sin</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="insertNumber(7)">7</button></td>
+				<td><button onclick="insertNumber(8)">8</button></td>
+				<td><button onclick="insertNumber(9)">9</button></td>
+				<td class="smallVoid"></td>
+				<td><button onclick="insertOperator('*')">*</button></td>
+				<td class="smallVoid"></td>
+				<td><button id="btn_cos" onclick="insertOperator('cos')">cos</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="insertNumber(0)">0</button></td>
+				<td><button onclick="changeSign()">+/-</button></td>
+				<td><button onclick="addDot()">.</button></td>
+				<td class="smallVoid"></td>
+				<td><button onclick="insertOperator('/')">/</button></td>
+				<td class="smallVoid"></td>
+				<td><button id="btn_tan" onclick="insertOperator('tan')">tan</button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
