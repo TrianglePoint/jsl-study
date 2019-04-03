@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+table, th, td{
+	border:solid .5px;
+	border-collapse: collapse;
+	border-color:#ffdf80;
+}
+th{
+	background-color:#ffdf80;
+}
+.center, p{
+	text-align:center;
+}
+.subtitle{
+	background-color:#ffffe6;
+	text-weight:bold;
+}
+.transparentBorder{
+	border-color:transparent;
+}

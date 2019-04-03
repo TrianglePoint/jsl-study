@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RegistUser</title>
+<link rel="stylesheet" type="text/css" href="regist.css" />
+<script type="text/javascript" src="regist.js"></script>
+</head>
+<body onload="firstRun()">
+     <form onsubmit="return validate()">
+     	<table>
+	     	<tr><th class="center" colspan="2">회원 기본 정보</th></tr>
+	     	<tr>
+		     	<td class="center subtitle">아이디:</td>
+		     	<td>
+		     		<input type="text" id="input_id" />
+		     		<span>4~12자의 영문 대소문자와 숫자로만 입력</span>
+		     	</td>
+	     	</tr>
+	     	
+	     	<tr>
+	     		<td class="center subtitle">비밀번호:</td>
+	     		<td>
+	     			<input type="text" id="input_pwd" />
+	     			<span>4~12자의 영문 대소문자와 숫자로만 입력</span>
+	     		</td>
+	     	</tr>
+	     	
+	     	<tr>
+	     		<td class="center subtitle">비밀번호확인:</td>
+	     		<td><input type="text" id="input_pwdConfirm" /></td>
+	     	</tr>
+	     	
+	     	<tr>
+	     		<td class="center subtitle">메일주소:</td>
+	     		<td>
+	     			<input type="text" id="input_mail" />
+	     			<span>예) id@domain.com</span>
+	     		</td>
+	     	</tr>
+	     	
+	     	<tr>
+	     		<td class="center subtitle">이름:</td>
+	     		<td><input type="text" id="input_name" /></td>
+	     	</tr>
+	     	
+	     	<tr><th class="center" colspan="2">개인 신상 정보</th></tr>
+	     	<tr>
+		     	<td class="center subtitle">주민등록번호:</td>
+		     	<td>
+		     		<input type="text" maxlength="13" id="input_joomin" 
+		     		oninput="checkJoomin(this.value)"/>
+		     		<span>예) 1234561234567</span>
+		     	</td>
+	     	</tr>
+	     	
+	     	<tr>
+	     		<td class="center subtitle">생일:</td>
+	     		<td>
+	     			<input type="text" id="input_year" readonly/>
+	     			<span>년</span>
+	     			<select id="select_month" onchange="setMaxDay(this.value)">
+	     			</select>
+	     			<span>월</span>
+	     			<select id="select_day">
+	     			</select><span>일</span>
+	     		</td>
+	     	</tr>
+	     	
+	     	<tr>
+	     		<td class="center subtitle">관심분야:</td>
+	     		<td>
+	     			<input type="checkbox" name="interest" value="컴퓨터" /> 컴퓨터
+	     			<input type="checkbox" name="interest" value="인터넷" /> 인터넷
+	     			<input type="checkbox" name="interest" value="여행" /> 여행
+	     			<input type="checkbox" name="interest" value="영화감상" /> 영화감상
+	     			<input type="checkbox" name="interest" value="음악감상" /> 음악감상
+				</td>
+	     	</tr>
+	     	
+	     	<tr>
+	     		<td class="center subtitle">자기소개:</td>
+	     		<td>
+	     			<textarea id="input_introduce" rows="6" cols="50"></textarea>
+	     		</td>
+	     	</tr>
+	     	<tr>
+	     		<td class="center transparentBorder" colspan="2">	
+	     			<br />
+		     		<input type="submit" value="회원 가입">
+		     		<input type="reset" value="다시 입력">
+	     		</td>
+	     	</tr>
+     	</table>
+     </form>
+</body>
+</html>
